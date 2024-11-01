@@ -62,7 +62,7 @@ export default defineConfig({
       /**
        * 布局
        */
-      'full-fex': 'absolute w-full h-full flex',
+      'full-flex': 'absolute w-full h-full flex',
       // 居中
       'position-center': 'absolute top-0 left-0 right-0 bottom-0  m-auto',
       'flex-center': 'flex items-center justify-center',

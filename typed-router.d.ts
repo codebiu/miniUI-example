@@ -19,6 +19,13 @@ declare module 'vue-router/auto-routes' {
    */
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
+    '//': RouteRecordInfo<'//', '/', Record<never, never>, Record<never, never>>,
+    '//component_dev': RouteRecordInfo<'//component_dev', '/component_dev', Record<never, never>, Record<never, never>>,
+    '//component_dev/': RouteRecordInfo<'//component_dev/', '/component_dev', Record<never, never>, Record<never, never>>,
+    '//component_dev/file_tree': RouteRecordInfo<'//component_dev/file_tree', '/component_dev/file_tree', Record<never, never>, Record<never, never>>,
+    '//component_dev/screen_auto': RouteRecordInfo<'//component_dev/screen_auto', '/component_dev/screen_auto', Record<never, never>, Record<never, never>>,
+    '//component_dev/screen_full': RouteRecordInfo<'//component_dev/screen_full', '/component_dev/screen_full', Record<never, never>, Record<never, never>>,
+    '//component_dev/todo': RouteRecordInfo<'//component_dev/todo', '/component_dev/todo', Record<never, never>, Record<never, never>>,
     '/_dev/': RouteRecordInfo<'/_dev/', '/_dev', Record<never, never>, Record<never, never>>,
     '/_dev/libBase/element_plus_import': RouteRecordInfo<'/_dev/libBase/element_plus_import', '/_dev/libBase/element_plus_import', Record<never, never>, Record<never, never>>,
     '/_server/table/DB': RouteRecordInfo<'/_server/table/DB', '/_server/table/DB', Record<never, never>, Record<never, never>>,
