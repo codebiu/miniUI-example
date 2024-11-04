@@ -4,9 +4,6 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import * as monaco from 'monaco-editor'
-import { language as sqlLanguage } from 'monaco-editor/esm/vs/basic-languages/sql/sql.js'
-import { language as yamlLanguage } from 'monaco-editor/esm/vs/basic-languages/yaml/yaml.js'
-import { language as javascriptLanguage } from 'monaco-editor/esm/vs/basic-languages/javascript/javascript.js'
 import 'monaco-editor/esm/vs/basic-languages/sql/sql.contribution'
 
 export type Theme = 'vs' | 'hc-black' | 'vs-dark'

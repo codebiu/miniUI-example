@@ -1,6 +1,6 @@
 <template>
-    <div h-full relative>
-        <div full-flex bg-deep-5>
+    <div>
+        <div h-full w-full bg-deep-5>
             full_screen
         </div>
     </div>
@@ -10,6 +10,4 @@
 
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

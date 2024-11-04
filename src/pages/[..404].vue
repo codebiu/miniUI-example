@@ -1,9 +1,3 @@
 <template>
-  <div>404</div>
+  <State404Base />
 </template>
-<script setup lang="ts">
-
-</script>
-<style scoped>
-
-</style>

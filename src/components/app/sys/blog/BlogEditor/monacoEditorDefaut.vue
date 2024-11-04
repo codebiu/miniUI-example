@@ -38,6 +38,9 @@ export default defineComponent({
               '/monaco-editor/esm/vs/language/typescript/ts.worker?worker',
               label
             )
+          // python
+          case 'python':
+            return getWorkerModule('/monaco-editor/esm/vs/language/python/python.worker?worker', label)
           default:
             return getWorkerModule('/monaco-editor/esm/vs/editor/editor.worker?worker', label)
         }

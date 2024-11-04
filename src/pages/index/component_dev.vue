@@ -22,6 +22,7 @@ import { SysSettingStore } from '@/stores/sys'
 const router = useRouter()
 const { sysStyle } = storeToRefs(SysSettingStore())
 sysStyle.value.headShow = true
+const baseRoute = '/component_dev'
 // 两级父子对象
 const buttonList = ref([
     {
@@ -41,16 +42,16 @@ const buttonList = ref([
         path: '/screen_auto'
     },
     {
-        name: 'todo',
-        path: '/todo'
+        name: 'button',
+        path: '/button'
     },
     {
-        name: 'todo',
-        path: '/todo'
+        name: 'editor',
+        path: '/editor'
     },
     {
-        name: 'todo',
-        path: '/todo'
+        name: 'state',
+        path: '/state'
     },
     {
         name: 'todo',
@@ -78,9 +79,18 @@ const clickButton = ref(buttonList.value[0])
 const handleClick = (item: any) => {
     clickButton.value = item
     // 如果有url，则跳转url
-    item.path && router.push('/component_dev' + item.path)
+    item.path && router.push(baseRoute + item.path)
     item.clickFuc && item.clickFuc(item)
 }
+
+onMounted(() => {
+    // 获取当前路由
+    const currentRoute = router.currentRoute.value
+    // 去除前面的baseRoute
+    const currentPath = currentRoute.path.replace(baseRoute, '')
+    const currentButton = buttonList.value.find((item: any) => item.path === currentPath)
+    currentButton && (clickButton.value = currentButton)
+})
 </script>
 
 <style scoped></style>
