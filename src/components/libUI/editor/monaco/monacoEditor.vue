@@ -1,5 +1,5 @@
 <template>
-  <div ref="codeEditBox" :class="props.hightChange "></div>
+  <div ref="codeEditBox" :class="props.hightChange"></div>
 </template>
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
@@ -34,6 +34,7 @@ type Props = {
   theme?: string
   options?: Object
 }
+// withDefaults 快速绑定默认值
 const props = withDefaults(defineProps<Props>(), {
   modelValue: '',
   hightChange: false,
@@ -73,21 +74,59 @@ onBeforeUnmount(() => {
 })
 
 
-let editor: any
+let editor: monaco.editor.IStandaloneCodeEditor
 const codeEditBox = ref()
 const init = () => {
-  editor = monaco.editor.create(codeEditBox.value, {
-    value: props.modelValue,
-    language: props.language,
-    readOnly: props.readOnly,
-    theme: props.theme,
-    ...props.options
-  })
+  editor = monaco.editor.create(codeEditBox.value, props)
+  // 初始化完成抛出
   emit('editor-mounted', editor)
 
 }
 
 
+// 外部更改editeor参数
+watch(
+  () => props.language,
+  (newValue) => {
+    monaco.editor.setModelLanguage(editor.getModel()!, newValue)
+  }
+)
+
+watch(
+  () => props.modelValue,
+  (newValue) => {
+    if (!editor) return
+    const value = editor.getValue()
+    if (newValue !== value) {
+      editor.setValue(newValue)
+    }
+  }
+
+)
+
+watch(
+  () => props.readOnly,
+  () => {
+    console.log('props.readOnly', props.readOnly)
+    editor.updateOptions({ readOnly: props.readOnly })
+  },
+  { deep: true }
+)
+
+watch(
+  () => props.options,
+  (newValue) => {
+    editor.updateOptions(newValue)
+  },
+  { deep: true }
+)
+watch(
+  () => props.theme,
+  (newValue) => {
+    monaco.editor.setTheme(newValue)
+  }
+)
+
+
 </script>
-<style scoped>
-</style>
+<style scoped></style>

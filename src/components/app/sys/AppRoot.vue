@@ -1,22 +1,21 @@
 <template>
-  <!-- 设置框-总-包含背景 -->
-  <SimplePopover fixed left-0 top-0 w-full h-full :show="sysSettingStore.isSysSettingShow" :bg="true"  backdrop-blur-sm>
+   <!-- 设置框-总-包含背景 -->
+   <SimplePopover fixed left-0 top-0 w-full h-full :show="sysSettingStore.isSysSettingShow" :bg="true" backdrop-blur-sm>
     <ShowHidden v-show="sysSettingStore.isSysSettingShow">
       <!-- 设置框-内 -->
-      <MoveWindow ref="dragRef" :isCenter ='true'>
-        <div z-100 text-xl shadow-blue-400 shadow-md rounded-2xl bg-deep-1 w-100 h-10 flex>
+      <MoveWindow ref="dragRef" :isCenter='true' >
+        <div z-100 text-xl shadow-md bg-deep-1 w-120 h-10 flex rounded-sm >
           <!-- 设置关闭按钮 -->
-          <div ml-4 h-full flex items-center ><span>设置</span></div>
-          <button absolute right-0 bg-deep-4 hover:text-deep-1 w-20 h-20 class="button-svg"
+          <div ml-4 h-full flex items-center><span>设置</span></div>
+          <button absolute right-0 bg-deep-2 hover:text-deep-1 hover:bg-deep-3 w-11 h-9.8  rounded-lg
             @click="sysSettingStore.isSysSettingShow = false">
-            <!-- 鲸鱼眼 四叶草 -->
-            <Plant4LeafCloverSVG absolute right-0 top-0 m-3 w-7 />
+            X
           </button>
         </div>
         <template v-slot:content>
-        <div w-100 h-60 bg-deep-0 shadow-xl rounded-2xl>
-          <SysSettingIndex />
-        </div>
+          <div w-120 h-90 bg-deep-0 shadow-xl>
+            <SysSettingIndex />
+          </div>
         </template>
       </MoveWindow>
     </ShowHidden>

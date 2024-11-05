@@ -1,11 +1,11 @@
 <template>
   <div grid-head-center-foot>
-    <SysHeader h-14 bg-deep-1 z-1 shadow />
+    <SysHeader h-14 bg-deep-1 z-11 shadow />
     <!-- :style="'clip-path: polygon(0 0, 100% 0, 100% 100%, 0 '+clipPath[0]+'%)'"  -->
     <main bg-deep-1 px-1 py-2 >
       <router-view ></router-view>
     </main>
-    <SysFooter mx-auto w-full p-2 lg:py-2 bg-deep-0 />
+    <SysFooter mx-auto w-full p-2 lg:py-2 bg-deep-0 z-11 />
   </div>
 </template>
 

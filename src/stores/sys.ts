@@ -30,7 +30,27 @@ const SysSettingStore = defineStore('sysSetting', () => {
 
   const isSysSettingShow = ref(false)
 
-  return { sysStyle, sysObj, isSysSettingShow }
+  /**
+ * 手动更改主题
+ */
+  const changeThemeValue = () => {
+    switch (sysStyle.value.theme.themeValue) {
+      case 'light':
+        sysStyle.value.theme.isDark = false
+        break
+      case 'dark':
+        sysStyle.value.theme.isDark = true
+        break
+      case 'auto':
+        // 媒体查询检测夜晚/黑暗模式
+        sysStyle.value.theme.isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        break
+    }
+    console.log('r_changeThemeValue',sysStyle.value.theme.isDark)
+    return sysStyle.value.theme.isDark
+  }
+
+  return { sysStyle, sysObj, isSysSettingShow, changeThemeValue }
 })
 
 export { SysSettingStore }

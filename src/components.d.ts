@@ -42,6 +42,8 @@ declare module 'vue' {
     MonacoEditorJS: typeof import('./components/libUI/editor/monaco/monacoEditorJS.vue')['default']
     MonacoEditorPython: typeof import('./components/libUI/editor/monaco/monacoEditorPython.vue')['default']
     MoveWindow: typeof import('./components/miniUI/miniComponent/popup/MoveWindow.vue')['default']
+    Neo4j: typeof import('./components/libUI/charts/neo4j.vue')['default']
+    NeoViz: typeof import('./components/libUI/charts/neoViz.vue')['default']
     PageInfo404: typeof import('./components/app/sampleUtils/state/PageInfo404.vue')['default']
     Plant4LeafCloverSVG: typeof import('./components/miniUI/miniSvg/close/Plant4LeafCloverSVG.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

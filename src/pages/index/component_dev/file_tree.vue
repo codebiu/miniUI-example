@@ -1,9 +1,8 @@
 <template>
     <div>
         <div h-full w-full bg-deep-5 flex>
-            <el-tree h-full w-60 :data="dataTree" :props="defaultProps" @node-click="handleNodeClick" />
+            <el-tree h-full w-60 bg-deep-2 :data="dataTree" :props="defaultProps" @node-click="handleNodeClick" />
             <div grow bg-deep-3>
-
                 <monacoEditor v-model="valueEditer" :language="language" :hight-change="hightChange" :read-only="false"
                     :theme="theme" w-full h-full @editor-mounted="handleEditorMounted" />
             </div>
@@ -17,9 +16,12 @@
 <script lang="ts" setup>
 import { fileObj, fileType } from '@/components/libUI/editor/monaco/FileInfo';
 import * as monaco from 'monaco-editor'
+
+import { SysSettingStore } from '@/stores/sys'
+const sysSettingStore = SysSettingStore()
+
+// 项目名
 const projectName = 'controller'
-
-
 onMounted(() => {
     getTree()
 })
@@ -69,7 +71,8 @@ const handleNodeClick = async (data: Tree) => {
     const response = await fetch(`http://localhost:1777/utils/open_stream?file=${projectName}/${path}`);
     // 判断类型
     const contentType = response.headers.get('content-type');
-    if (!contentType) return
+    if (!contentType || !editor) return
+    // 查找支持的类型
     let fileObjThis
     for (let i in fileObj) {
         if (contentType.includes(i)) {
@@ -77,23 +80,21 @@ const handleNodeClick = async (data: Tree) => {
             break
         }
     }
-    if (!fileObjThis) return
+    // 没有支持的类型
+    if (!fileObjThis) {
+        valueEditer.value = `${path} 当前文件不支持解析`
+        return
+    }
     switch (fileObjThis.type) {
         case fileType.TEXT:
             {
-                if (!editor) return
                 const text = await response.text();
-                const model = editor.getModel();
-                if (model) monaco.editor.setModelLanguage(model, fileObjThis.language);
-                editor.setValue(text)
-
+                language.value = fileObjThis.language
+                valueEditer.value = text
             }
             break;
         case fileType.IMAGE:
 
-            break;
-
-        default:
             break;
     }
 }
@@ -101,7 +102,8 @@ const handleNodeClick = async (data: Tree) => {
 //////////////////////////monacoEditor
 const valueEditer = ref('')
 const language = ref('javascript')
-const theme = ref('vs-dark')
+// const theme = ref('vs-dark')
+const theme = ref('vs')
 const hightChange = ref<any>(false)
 
 let editor = null as null | monaco.editor.IStandaloneCodeEditor
@@ -109,6 +111,37 @@ const handleEditorMounted = (editorChild: any) => {
     editor = editorChild
     // hightChange.value = true
 }
+
+
+/////////////////////////监听
+// const subscribeSysSetting = sysSettingStore.$subscribe((mutation, state) => {
+//     const events = mutation.events as any
+//     if (!events) return
+//     const key = events.key
+//     if (!key) return
+//     // console.log('mapUseStore', key)
+//     // const value = events.newValue
+//     switch (key) {
+//         case 'themeValue':
+//             theme.value = sysSettingStore.sysStyle.theme.isDark ? 'vs-dark' : 'vs'
+//             break
+//     }
+// })
+
+
+const subscribeAction = sysSettingStore.$onAction(
+    ({ name, args, after }) => {
+        after(() => {
+            switch (name) {
+                case 'changeThemeValue':
+                    theme.value = sysSettingStore.sysStyle.theme.isDark ? 'vs-dark' : 'vs'
+                    break;
+                default:
+                    break;
+            }
+        })
+    }
+)
 </script>
 
 <style scoped></style>

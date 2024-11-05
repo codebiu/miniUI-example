@@ -20,7 +20,7 @@
       <!-- 用户图标 -->
       <UserLogin @click="sysStyle.isUserControlShow = !sysStyle.isUserControlShow" w-8 h-8/>
       <!-- 点击用户图标下拉 导航栏-->
-      <MinPopover v-model="sysStyle.isUserControlShow">
+      <MinPopover v-model="sysStyle.isUserControlShow" z-999>
         <ShowHidden v-show="sysStyle.isUserControlShow">
           <UserControl
             absolute

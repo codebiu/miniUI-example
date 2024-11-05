@@ -1,6 +1,6 @@
 <template>
   <!-- 语言选择 -->
-  <div flex items-center p-3 bg-deep-2 rounded-md text-align-last-justify>
+  <div flex items-center p-1 rounded-md text-align-last-justify>
     <!-- 对齐key -->
     <div class="w-4/9" flex items-center>
       <span w-full h-full>{{ $t('language') }}</span>
@@ -10,7 +10,7 @@
     <select
       v-model="sysStyle.language"
       @change="changeValueFunc"
-      bg-deep-3
+      bg-deep-2
       class="w-5/9"
       h-full
       rounded-md
@@ -18,9 +18,8 @@
       px-4
     >
       <!-- <option disabled value="">Please select one</option> -->
-      <option v-for="item in languageOptions" :key="item.value" :value="item.value" bg-deep-4>
+      <option v-for="item in languageOptions" :key="item.value" :value="item.value"  bg-deep-2>
         <!--     :label="item.label" -->
-
         <img src="" alt="" w-50 h-50 />
         {{ item.label }}
       </option>
