@@ -23,6 +23,7 @@ declare module 'vue-router/auto-routes' {
     '//component_dev': RouteRecordInfo<'//component_dev', '/component_dev', Record<never, never>, Record<never, never>>,
     '//component_dev/': RouteRecordInfo<'//component_dev/', '/component_dev', Record<never, never>, Record<never, never>>,
     '//component_dev/button': RouteRecordInfo<'//component_dev/button', '/component_dev/button', Record<never, never>, Record<never, never>>,
+    '//component_dev/echart_graph': RouteRecordInfo<'//component_dev/echart_graph', '/component_dev/echart_graph', Record<never, never>, Record<never, never>>,
     '//component_dev/editor': RouteRecordInfo<'//component_dev/editor', '/component_dev/editor', Record<never, never>, Record<never, never>>,
     '//component_dev/file_tree': RouteRecordInfo<'//component_dev/file_tree', '/component_dev/file_tree', Record<never, never>, Record<never, never>>,
     '//component_dev/screen_auto': RouteRecordInfo<'//component_dev/screen_auto', '/component_dev/screen_auto', Record<never, never>, Record<never, never>>,

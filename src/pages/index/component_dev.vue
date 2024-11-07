@@ -54,8 +54,8 @@ const buttonList = ref([
         path: '/state'
     },
     {
-        name: 'todo',
-        path: '/todo'
+        name: 'echart_graph',
+        path: '/echart_graph'
     },
     {
         name: 'todo',
