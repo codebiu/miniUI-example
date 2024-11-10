@@ -58,8 +58,8 @@ const buttonList = ref([
         path: '/echart_graph'
     },
     {
-        name: 'todo',
-        path: '/todo'
+        name: 'layout布局',
+        path: '/layout'
     },
     {
         name: 'todo',

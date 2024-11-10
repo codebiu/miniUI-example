@@ -40,7 +40,7 @@ export default defineConfig(
             globalsPropValue: true,
           },
           resolvers: [
-            // 自动导入图标组件
+            // 自动导入图标组件 https://icones.netlify.app/
             IconsResolver({ prefix: 'Icon' }),
             // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
             ElementPlusResolver(),
@@ -49,7 +49,7 @@ export default defineConfig(
         }),
         Components({
           resolvers: [
-            // 自动注册图标组件  edit引入格式 <i-ep-edit />
+            // 自动注册图标组件  edit引入格式  “前缀-使用的图标库名称-图标名”  <i-ep-edit />
             IconsResolver({ enabledCollections: ['ep'] }),
             //自动导入 Element Plus 组件
             ElementPlusResolver(),

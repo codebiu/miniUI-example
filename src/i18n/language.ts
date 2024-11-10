@@ -12,7 +12,10 @@ const languageObj = {
   autoSys: ['跟随系统', 'システムに従う', 'follow system'],
   auto: ['自动', '自動', 'auto'],
   home: ['首页', 'ホーム', 'home'],
-  about: ['关于', 'アバウト', 'about']
+  about: ['关于', 'アバウト', 'about'],
+  titleDemo: ['标题', 'タイトル', 'title'],
+  // 后台管理
+  admin: ['后台管理', '管理画面', 'admin'],
 } as any
 // 语言对照选择格式
 const languageOptions: {
