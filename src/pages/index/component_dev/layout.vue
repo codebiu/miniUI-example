@@ -1,6 +1,7 @@
 <template>
     <div>
         <SimpleHeader >{{titleDemo}}</SimpleHeader>
+        <DivResizable/>
     </div>
 </template>
 
