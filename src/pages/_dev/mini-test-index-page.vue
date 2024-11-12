@@ -6,7 +6,7 @@
                 <span :class="item.id === dataSlice.active && 'bg-deep-4'">{{ item.name }}</span>
             </li>
         </ul>
-        <main grow h-full border-4 border-black overflow-auto overscroll-contain ref="outBox">
+        <main grow h-full border-4 border-black overflow-auto overscroll-contain scrollbar-hide ref="outBox">
             <section v-for="(item, index) in dataSlice.list" :key="index" :id="item.id" h-full
                 :class="(indexStart + index) % 2 === 0 ? 'bg-gray-200' : 'bg-gray-400'" ref="dataRef">
                 <div>{{ item.name }}</div>
@@ -24,12 +24,12 @@
     </div>
 </template>
 <script setup lang="ts">
-import { SateSet } from '@/components/common/miniExtension/utils/state'
+import { SateSet } from '@/components/miniUI/miniExtension/utils/state'
 const monacoEditor = defineAsyncComponent(
-    () => import('@/components/app/sys/blog/BlogEditor/monacoEditor.vue')
+    () => import('@/components/libUI/editor/monaco/monacoEditor.vue')
 )
 const miniIndex = defineAsyncComponent(
-    () => import('@/components/common/miniExample/mini_index.vue')
+    () => import('@/components/miniUI/miniExample/mini_index.vue')
 )
 const outBox = ref<Element>()
 const sateSet = new SateSet()
@@ -72,6 +72,7 @@ const dataSlice: Ref<DataSlice> = ref({ active: null, list: [] })
 // 已渲染数组开始
 let indexStart = ref(0)
 let indexInDataAllOld = 0
+
 /**
  * 更新数据
  * @param data 对象
@@ -161,8 +162,4 @@ const observer = new IntersectionObserver(async (entries) => {
 }, options)
 </script>
 <style scoped>
-main::-webkit-scrollbar {
-    /*隐藏滚轮*/
-    display: none;
-}
 </style>

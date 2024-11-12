@@ -15,7 +15,9 @@ export default defineConfig({
     // 抽屉
     ['m-1', { margin: '0.3rem' }],
     ['grid-center', { 'grid-template-rows': 'auto minmax(0, 1fr) auto' }],
-    ['text-align-last-justify', { 'text-align-last': 'justify' }]
+    ['text-align-last-justify', { 'text-align-last': 'justify' }],
+    // 隐藏滚动条 -ms-overflow-style 兼容IE10+
+    ['scrollbar-hide', { 'scrollbar-width': 'none', '-ms-overflow-style': 'none' }], 
   ],
   shortcuts: [
     //Lime green teal emerald

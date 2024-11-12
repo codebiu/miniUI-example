@@ -1,6 +1,6 @@
 <template>
     <div>
-        test
+        分类  不同组件分大类
     </div>
 </template>
 

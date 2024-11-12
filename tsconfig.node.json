@@ -7,7 +7,7 @@
     "nightwatch.conf.*",
     "playwright.config.*",
     "build/**/*.ts"
-  ],
+, "build/self/parseVueFiles.js"  ],
   "compilerOptions": {
     "composite": true,
     "noEmit": true,

@@ -31,3 +31,19 @@ body,
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
 }
+
+
+
+  /* 隐藏Grammarly的UI元素 */
+  .gr_gramm,
+  .gr_gramm_r,
+  .gr_grammly_pink,
+  .gr_grammly_green,
+  .gr_grammly_underline {
+    display: none !important;
+  }
+
+  /* 隐藏Grammarly的弹出窗口 */
+  .gr_grammly_tooltip {
+    display: none !important;
+  }

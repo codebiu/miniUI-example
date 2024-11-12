@@ -8,7 +8,7 @@
       </router-link>
       <!-- 空标题 可以加装饰 -->
       <span left-0 right-0 m-auto></span>
-      <ul flex w-200px>
+      <ul flex min-w-200px>
         <!-- 循环buttonList -->
         <li v-for="(item, index) in  buttonList " :key="index" m-1>
           <button flex items-center w-full h-full bg-deep-0 rounded-sm hover:bg-deep-2 shadow-warmgray
@@ -54,8 +54,12 @@ const buttonList = ref([
     path: '/',
   },
   {
-    name: '组件',
-    path: '/component_dev',
+    name: 'mini组件',
+    path: '/component_mini',
+  },
+  {
+    name: 'lib组件',
+    path: '/component_lib',
   },
 ])
 
