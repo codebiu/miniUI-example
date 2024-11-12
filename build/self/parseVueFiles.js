@@ -69,7 +69,7 @@ async function parseVue3Files(dirPath, toFinds) {
   const results = []
   for (const file of vueFiles) {
     const properties = await parseVue3FileSingle(path.join(dirPath, file.name), toFinds)
-    results.push(properties)
+    properties&&results.push(properties)
   }
   return results
 }
@@ -94,6 +94,7 @@ async function parseVue3FileSingle(filePath, toFinds) {
   for (const comment of comments) {
     commentResult.push(parseComment(comment, toFinds))
   }
+  if(commentResult.length === 0) return
   const properties = commentResult[0]
   properties.name = fileName.split('.')[0]
   return properties
