@@ -12,7 +12,7 @@
                 </li>
             </ul>
             <!-- flex剩余 -->
-            <router-view grow bg-deep-2 overflow-auto></router-view>
+            <router-view grow  overflow-auto></router-view>
         </div>
     </div>
 </template>
@@ -62,8 +62,8 @@ const buttonList = ref([
         path: '/layout'
     },
     {
-        name: 'todo',
-        path: '/todo'
+        name: 'chat',
+        path: '/chat'
     },
     {
         name: 'todo',

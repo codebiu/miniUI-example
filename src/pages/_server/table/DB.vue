@@ -31,7 +31,7 @@ onMounted(() => {
 
 const getUsers = async () => {
   // 模拟从服务器获取用户数据
-  const response = await fetch('http://localhost:1666/user/list');
+  const response = await fetch('http://localhost:2666/user/list');
   const data = await response.json();
   users.columns = Object.keys(data[0]);
   users.list = data;
