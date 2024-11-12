@@ -1,5 +1,11 @@
 const fileList = [
   {
+    "parent": "button",
+    "summary": "简介",
+    "description": "标准模板",
+    "name": "button"
+  },
+  {
     "name": "chat"
   },
   {
