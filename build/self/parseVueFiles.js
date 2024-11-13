@@ -13,6 +13,24 @@ function readDirectory(dirPath) {
 }
 
 /**
+ * 读取目录下的所有文件和子目录
+ * @param {string} dirPath - 目录路径
+ * @returns {Promise<Array>} - 递归包含文件和子目录信息的数组
+ */
+async function readDirectoryAll(dirPath) {
+  const entries = await readDirectory(dirPath)
+  const result = [...entries]
+  for (const entry of entries) {
+    const fullPath = path.join(dirPath, entry.name)
+    if (entry.isDirectory()) {
+      const subEntries = await readDirectoryAll(fullPath)
+      result.push(...subEntries)
+    }
+  }
+  return result
+}
+
+/**
  * 检查文件是否为 Vue 文件
  * @param {fs.Dirent} file - 文件信息对象
  * @returns {boolean} - 是否为 Vue 文件
@@ -34,6 +52,17 @@ function extractComments(code) {
     comments.push(match[0])
   }
   return comments
+}
+
+function extractPath(fullPath) {
+  // 使用 path 模块将路径转换为标准格式
+  const normalizedPath = path.normalize(fullPath)
+
+  // 使用正则表达式匹配 'pages' 和 '.vue' 之间的路径部分
+  const regex = /pages(.*?).vue/
+  const match = normalizedPath.match(regex)
+  if (match && match[1]) return match[1].replace(/\\/g, '/')
+  return '未识别!'
 }
 
 /**
@@ -64,12 +93,14 @@ function parseComment(comment, toFinds) {
  * @returns {Promise<Array>} - 包含文件名和注释的数组 [{"key0": "value0",}]
  */
 async function parseVue3Files(dirPath, toFinds) {
-  const files = await readDirectory(dirPath)
+  // 获取dirPath和子文件夹的所有文件
+  // const files = await readDirectory(dirPath)
+  const files = await readDirectoryAll(dirPath)
   const vueFiles = files.filter(isVueFile)
   const results = []
   for (const file of vueFiles) {
-    const properties = await parseVue3FileSingle(path.join(dirPath, file.name), toFinds)
-    properties&&results.push(properties)
+    const properties = await parseVue3FileSingle(path.join(file.path, file.name), toFinds)
+    properties && results.push(properties)
   }
   return results
 }
@@ -82,6 +113,9 @@ async function parseVue3Files(dirPath, toFinds) {
  * */
 async function parseVue3FileSingle(filePath, toFinds) {
   const fileContent = await fs.promises.readFile(filePath, 'utf-8')
+  //获取'pages'和'.vue'中间路径
+  const pathFromPagesVue = extractPath(filePath)
+
   const parsed = parse(fileContent)
   // 文件名
   const fileName = path.basename(filePath)
@@ -94,14 +128,11 @@ async function parseVue3FileSingle(filePath, toFinds) {
   for (const comment of comments) {
     commentResult.push(parseComment(comment, toFinds))
   }
-  if(commentResult.length === 0) return
-  const properties = commentResult[0]
+  // 获取第一批注释属性  没有就{}
+  const properties = commentResult[0]||{}
   properties.name = fileName.split('.')[0]
+  properties.pathFromPagesVue = pathFromPagesVue
   return properties
 }
 
-
-export {
-  parseVue3Files,
-  parseVue3FileSingle
-}
+export { parseVue3Files, parseVue3FileSingle }
