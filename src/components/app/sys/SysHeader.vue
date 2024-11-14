@@ -1,6 +1,6 @@
 <template>
   <!-- 网站页首 -->
-  <header v-show="sysStyle.headShow" >
+  <header v-if="sysStyle.headFootShow" >
     <div flex flex-wrap justify-between p-4>
       <router-link to="/" flex>
         <img src="@/assets/img/ion/sy_w.svg" h-8 mr-3 />

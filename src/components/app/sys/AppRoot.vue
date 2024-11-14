@@ -1,6 +1,6 @@
 <template>
    <!-- 设置框-总-包含背景 -->
-   <SimplePopover fixed left-0 top-0 w-full h-full :show="sysSettingStore.isSysSettingShow" :bg="true" backdrop-blur-sm>
+   <SimplePopover z-1001  fixed left-0 top-0 w-full h-full :show="sysSettingStore.isSysSettingShow" :bg="true" backdrop-blur-sm>
     <ShowHidden v-show="sysSettingStore.isSysSettingShow">
       <!-- 设置框-内 -->
       <MoveWindow ref="dragRef" :isCenter='true' >
@@ -20,11 +20,23 @@
       </MoveWindow>
     </ShowHidden>
   </SimplePopover>
+
+  <div z-1000 fixed right-0 bottom-50 w-5 text-3  btn-deep-3 p-1 @click="changeLeftControlShow">侧边栏开关</div>
+  <div z-1000 fixed right-0 bottom-10  w-5 text-3 btn-deep-3 p-1 @click="changeHeadFootShow">页眉页脚开关</div>
 </template>
 <script setup lang="ts">
 // 显隐控制
 import { SysSettingStore } from '@/stores/sys'
 const sysSettingStore = SysSettingStore()
+const sysStyle = sysSettingStore.sysStyle
+
+const changeLeftControlShow = () => {
+  sysStyle.leftControlShow = !sysStyle.leftControlShow
+
+}
+const changeHeadFootShow = () => {
+  sysStyle.headFootShow = !sysStyle.headFootShow
+}
 </script>
 <style scoped>
 

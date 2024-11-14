@@ -3,7 +3,7 @@
   <!-- 非正常结构 弹窗类 控制类 异步加载-->
   <Suspense>
     <!-- 异步弹窗 -->
-    <AppRoot z-999 />
+    <AppRoot />
     <!-- 加载中状态 -->
     <template #fallback>
       <!-- <WaitAnimate></WaitAnimate> -->

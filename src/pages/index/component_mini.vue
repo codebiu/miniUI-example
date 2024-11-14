@@ -21,7 +21,7 @@
 import { SysSettingStore } from '@/stores/sys'
 const router = useRouter()
 const { sysStyle } = storeToRefs(SysSettingStore())
-sysStyle.value.headShow = true
+sysStyle.value.headFootShow = true
 const baseRoute = '/component_mini'
 // 两级父子对象
 const buttonList = ref([

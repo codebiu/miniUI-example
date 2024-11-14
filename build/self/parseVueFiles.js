@@ -59,7 +59,8 @@ function extractPath(fullPath) {
   const normalizedPath = path.normalize(fullPath)
 
   // 使用正则表达式匹配 'pages' 和 '.vue' 之间的路径部分
-  const regex = /pages(.*?).vue/
+  // const regex = /pages(.*?).vue/
+  const regex = /pages\\index\\(.*?).vue/;
   const match = normalizedPath.match(regex)
   if (match && match[1]) return match[1].replace(/\\/g, '/')
   return '未识别!'
@@ -132,6 +133,10 @@ async function parseVue3FileSingle(filePath, toFinds) {
   const properties = commentResult[0]||{}
   properties.name = fileName.split('.')[0]
   properties.pathFromPagesVue = pathFromPagesVue
+  // 每行注释查找关键词
+  for (const key in toFinds) {
+    properties[key] = properties[key]|| ''
+  }
   return properties
 }
 

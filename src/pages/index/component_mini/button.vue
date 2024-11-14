@@ -1,6 +1,6 @@
 <template>
     <div flex flex-col>
-        <ButtonSwitch p-2 />
+        <ButtonSwitch v-model="mapEditObj.isWmsShow" @change = "console.log('change')"/>
         <button w-20 h-20 bg-deep-09 class="button-svg"></button>
     </div>
 </template>
@@ -14,7 +14,7 @@
  * @Copyright    :(C) 2024 itild. All rights reserved.
  * @parent       :button
  * @summary      :button list
- * @description  :切换按钮 动画按钮 
+ * @description  :按钮(切换/动画/头像)  
  * 
  * 1 import 2 type 3 class 4 obj 5 vue
  * 6 watch 7 fuc 8 fetch 9 code_block

@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "refreshList": "node build//self//fileList.js",
     "lib": "pnpm i",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",

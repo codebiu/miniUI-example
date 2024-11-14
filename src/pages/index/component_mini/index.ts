@@ -5,9 +5,9 @@ const fileList = [
       {
         "parent": "button",
         "summary": "button list",
-        "description": "切换按钮 动画按钮",
+        "description": "按钮(切换/动画/头像)",
         "name": "button",
-        "pathFromPagesVue": "/index/component_mini/button"
+        "pathFromPagesVue": "component_mini/button"
       }
     ]
   },
@@ -16,47 +16,80 @@ const fileList = [
     "child": [
       {
         "name": "chat",
-        "pathFromPagesVue": "/index/component_mini/chat"
+        "pathFromPagesVue": "component_mini/chat",
+        "parent": "",
+        "summary": "",
+        "description": ""
       },
       {
         "name": "classGraph",
-        "pathFromPagesVue": "/index/component_mini/classGraph"
+        "pathFromPagesVue": "component_mini/classGraph",
+        "parent": "",
+        "summary": "",
+        "description": ""
       },
       {
         "name": "dependencyGraph",
-        "pathFromPagesVue": "/index/component_mini/dependencyGraph"
+        "pathFromPagesVue": "component_mini/dependencyGraph",
+        "parent": "",
+        "summary": "",
+        "description": ""
       },
       {
         "name": "echart_graph",
-        "pathFromPagesVue": "/index/component_mini/echart_graph"
+        "pathFromPagesVue": "component_mini/echart_graph",
+        "parent": "",
+        "summary": "",
+        "description": ""
       },
       {
         "name": "editor",
-        "pathFromPagesVue": "/index/component_mini/editor"
+        "pathFromPagesVue": "component_mini/editor",
+        "parent": "",
+        "summary": "",
+        "description": ""
       },
       {
         "name": "file_tree",
-        "pathFromPagesVue": "/index/component_mini/file_tree"
+        "pathFromPagesVue": "component_mini/file_tree",
+        "parent": "",
+        "summary": "",
+        "description": ""
       },
       {
         "name": "file_tree_search",
-        "pathFromPagesVue": "/index/component_mini/file_tree_search"
+        "pathFromPagesVue": "component_mini/file_tree_search",
+        "parent": "",
+        "summary": "",
+        "description": ""
       },
       {
         "name": "layout",
-        "pathFromPagesVue": "/index/component_mini/layout"
+        "pathFromPagesVue": "component_mini/layout",
+        "parent": "",
+        "summary": "",
+        "description": ""
       },
       {
         "name": "screen_auto",
-        "pathFromPagesVue": "/index/component_mini/screen_auto"
+        "pathFromPagesVue": "component_mini/screen_auto",
+        "parent": "",
+        "summary": "",
+        "description": ""
       },
       {
         "name": "screen_full",
-        "pathFromPagesVue": "/index/component_mini/screen_full"
+        "pathFromPagesVue": "component_mini/screen_full",
+        "parent": "",
+        "summary": "",
+        "description": ""
       },
       {
         "name": "state",
-        "pathFromPagesVue": "/index/component_mini/state"
+        "pathFromPagesVue": "component_mini/state",
+        "parent": "",
+        "summary": "",
+        "description": ""
       }
     ]
   },
@@ -68,7 +101,7 @@ const fileList = [
         "summary": "简介",
         "description": "标准模板",
         "name": "todo",
-        "pathFromPagesVue": "/index/component_mini/todo"
+        "pathFromPagesVue": "component_mini/todo"
       }
     ]
   }

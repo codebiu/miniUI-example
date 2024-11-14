@@ -35,6 +35,7 @@ declare module 'vue-router/auto-routes' {
     '//component_lib/libBase/mediapipe_holistic': RouteRecordInfo<'//component_lib/libBase/mediapipe_holistic', '/component_lib/libBase/mediapipe_holistic', Record<never, never>, Record<never, never>>,
     '//component_lib/libBase/mediapipe_pose': RouteRecordInfo<'//component_lib/libBase/mediapipe_pose', '/component_lib/libBase/mediapipe_pose', Record<never, never>, Record<never, never>>,
     '//component_lib/libBase/monaco': RouteRecordInfo<'//component_lib/libBase/monaco', '/component_lib/libBase/monaco', Record<never, never>, Record<never, never>>,
+    '//component_lib/libBase/onnxruntime': RouteRecordInfo<'//component_lib/libBase/onnxruntime', '/component_lib/libBase/onnxruntime', Record<never, never>, Record<never, never>>,
     '//component_lib/libBase/opencv': RouteRecordInfo<'//component_lib/libBase/opencv', '/component_lib/libBase/opencv', Record<never, never>, Record<never, never>>,
     '//component_lib/libBase/opencv-video': RouteRecordInfo<'//component_lib/libBase/opencv-video', '/component_lib/libBase/opencv-video', Record<never, never>, Record<never, never>>,
     '//component_lib/libBase/openlayer': RouteRecordInfo<'//component_lib/libBase/openlayer', '/component_lib/libBase/openlayer', Record<never, never>, Record<never, never>>,

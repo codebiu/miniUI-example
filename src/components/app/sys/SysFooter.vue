@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer v-if="sysStyle.headFootShow">
     <!-- <hr border-gray-400 sm:mx-auto dark:border-gray-8 lg:mb-2 /> -->
     <!-- 关联账号 本站 备案 -->
     <div sm:flex sm:items-center sm:justify-between>
@@ -30,6 +30,10 @@
 </template>
 
 <script setup lang="ts">
+// 样式控制
+import { SysSettingStore } from '@/stores/sys'
+const sysSettingStore = SysSettingStore()
+const sysStyle = sysSettingStore.sysStyle
 const yearNow = new Date().getFullYear()
 </script>
 
