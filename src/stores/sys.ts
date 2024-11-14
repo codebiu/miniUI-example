@@ -24,20 +24,12 @@ const SysSettingStore = defineStore('sysSetting', () => {
   const sysObj = {
     $ObjLargeTemp: new Map()
   }
-  // 窗口变化重置
-  window.onresize = () => {
-    // 判断中小设备
-    sysStyle.value.isMd = window.innerWidth > baseMd
-  }
-
+  // 窗口变化重置 // 判断中小设备
+  window.onresize = () => sysStyle.value.isMd = window.innerWidth > baseMd
   // 设置弹窗
   const isSysSettingShow = ref(false)
-
-
-  /**
- * 手动更改主题
- */
-  const changeThemeValue = () => {
+  // 根据主题值更改isDark
+  const changeIsDarkByThemeValue = () => {
     switch (sysStyle.value.theme.themeValue) {
       case 'light':
         sysStyle.value.theme.isDark = false
@@ -50,11 +42,12 @@ const SysSettingStore = defineStore('sysSetting', () => {
         sysStyle.value.theme.isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         break
     }
-    console.log('r_changeThemeValue',sysStyle.value.theme.isDark)
     return sysStyle.value.theme.isDark
   }
-
-  return { sysStyle, sysObj, isSysSettingShow, changeThemeValue }
+  // 根据isDark更改主题
+  const changeThemeValueByIsDark = () => sysStyle.value.theme.themeValue = sysStyle.value.theme.isDark ? 'dark' : 'light'
+ 
+  return { sysStyle, sysObj, isSysSettingShow, changeIsDarkByThemeValue, changeThemeValueByIsDark }
 })
 
 export { SysSettingStore }

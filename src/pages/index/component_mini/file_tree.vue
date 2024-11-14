@@ -98,7 +98,7 @@
     ({ name, args, after }) => {
       after(() => {
         switch (name) {
-          case 'changeThemeValue':
+          case 'changeIsDarkByThemeValue':
             theme.value = sysSettingStore.sysStyle.theme.isDark ? 'vs-dark' : 'vs'
             break;
           default:

@@ -8,7 +8,7 @@
       v-model="sysSettingStore.sysStyle.theme.themeValue"
       :name="$t('theme')"
       :options="themeOptions"
-      :changeValueFunc="sysSettingStore.changeThemeValue"
+      :changeValueFunc="sysSettingStore.changeIsDarkByThemeValue"
     />
     <!-- 语言选择 -->
     <SettingLanguage w-70 h-14 m-2 />

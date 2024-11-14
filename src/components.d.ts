@@ -21,8 +21,6 @@ declare module 'vue' {
     Func_1: typeof import('./components/app/sys/head/Func_1.vue')['default']
     GithubSVG: typeof import('./components/miniUI/miniSvg/GithubSVG.vue')['default']
     GmailSVG: typeof import('./components/miniUI/miniSvg/GmailSVG.vue')['default']
-    IEpAvatar: typeof import('~icons/ep/avatar')['default']
-    IEpUerser: typeof import('~icons/ep/uerser')['default']
     LayoutHLMF: typeof import('./components/miniUI/miniComponent/layout/LayoutHLMF.vue')['default']
     ListSVG: typeof import('./components/miniUI/miniSvg/ListSVG.vue')['default']
     LogoutSVG: typeof import('./components/miniUI/miniSvg/LogoutSVG.vue')['default']

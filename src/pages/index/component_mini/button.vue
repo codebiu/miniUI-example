@@ -1,7 +1,7 @@
 <template>
     <div flex flex-col>
-        <ButtonSwitch v-model="mapEditObj.isWmsShow" @change = "console.log('change')"/>
-        <button w-20 h-20 bg-deep-09 class="button-svg"></button>
+        <ButtonSwitch v-model="sysSettingStore.sysStyle.theme.isDark" @change="sysSettingStore.changeThemeValueByIsDark"/>
+        <button w-20 h-20 bg-deep-07 class="button-svg"></button>
     </div>
 </template>
 <script setup lang='ts'>
@@ -20,6 +20,9 @@
  * 6 watch 7 fuc 8 fetch 9 code_block
  */
 ////////////////////1_import_______////////////////////
+import { SysSettingStore } from '@/stores/sys'
+const sysSettingStore =SysSettingStore()
+
 ////////////////////2_type_________////////////////////
 ////////////////////3_class________////////////////////
 ////////////////////4_obj__________////////////////////
