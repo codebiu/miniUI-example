@@ -144,6 +144,9 @@ importers:
       vite:
         specifier: ^5.2.8
         version: 5.4.10(@types/node@20.17.4)
+      vite-plugin-static-copy:
+        specifier: ^2.1.0
+        version: 2.1.0(vite@5.4.10(@types/node@20.17.4))
       vite-plugin-vue-devtools:
         specifier: ^7.0.25
         version: 7.6.1(rollup@4.24.3)(vite@5.4.10(@types/node@20.17.4))(vue@3.5.12(typescript@5.4.5))
@@ -2541,6 +2544,12 @@ packages:
     peerDependenciesMeta:
       '@nuxt/kit':
         optional: true
+
+  vite-plugin-static-copy@2.1.0:
+    resolution: {integrity: sha512-n8lEOIVM00Y/zronm0RG8RdPyFd0SAAFR0sii3NWmgG3PSCyYMsvUNRQTlb3onp1XeMrKIDwCrPGxthKvqX9OQ==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    peerDependencies:
+      vite: ^5.0.0
 
   vite-plugin-vue-devtools@7.6.1:
     resolution: {integrity: sha512-nMzlrEd60HG9KSmN4xsEponDoFFh+1LNFIuuJplo5irS8QEg4aG+vBsE3EWo5S1e5OSi1mqPX++hL/jVjncBUA==}
@@ -5348,6 +5357,14 @@ snapshots:
     transitivePeerDependencies:
       - rollup
       - supports-color
+
+  vite-plugin-static-copy@2.1.0(vite@5.4.10(@types/node@20.17.4)):
+    dependencies:
+      chokidar: 3.6.0
+      fast-glob: 3.3.2
+      fs-extra: 11.2.0
+      picocolors: 1.1.1
+      vite: 5.4.10(@types/node@20.17.4)
 
   vite-plugin-vue-devtools@7.6.1(rollup@4.24.3)(vite@5.4.10(@types/node@20.17.4))(vue@3.5.12(typescript@5.4.5)):
     dependencies:

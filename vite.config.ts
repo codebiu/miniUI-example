@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import VueDevTools from 'vite-plugin-vue-devtools'
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 // css 辅助
 import UnoCSS from 'unocss/vite'
@@ -57,7 +58,16 @@ export default defineConfig(
           dts: path.resolve(pathSrc, 'components.d.ts')
         }),
         // 自动引入图标资源并安装
-        Icons({ autoInstall: true })
+        Icons({ autoInstall: true }),
+        // 静态文件复制
+        viteStaticCopy({
+          targets: [
+            {
+              src: "./node_modules/onnxruntime-web/dist/*.wasm",
+              dest: "./",
+            },
+          ],
+        }),
       ],
       // 路径别名
       resolve: {
@@ -75,6 +85,6 @@ export default defineConfig(
         },
         // 代理
         proxy: proxys
-      }
+      },
     }
   })
