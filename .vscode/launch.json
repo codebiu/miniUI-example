@@ -12,7 +12,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "针对 localhost 启动 Chrome",
-            "url": "http://localhost:1666",
+            "url": "http://localhost:2777",
             "webRoot": "${workspaceFolder}",
             "sourceMaps": true
         }
