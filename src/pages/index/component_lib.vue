@@ -27,7 +27,8 @@ const baseRoute = '/component_mini'
 const buttonList = ref([
     {
         name: 'component_mini',
-        path: '/'
+        path: '/',
+        icon: 'i-ep-avatar'
     },
     {
         name: '文件树',

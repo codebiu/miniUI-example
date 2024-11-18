@@ -1,6 +1,8 @@
 <template>
     <div flex flex-col>
+        <div>切换</div>
         <ButtonSwitch v-model="sysSettingStore.sysStyle.theme.isDark" @change="sysSettingStore.changeThemeValueByIsDark"/>
+        <div>动画</div>
         <button w-20 h-20 bg-deep-07 class="button-svg"></button>
     </div>
 </template>

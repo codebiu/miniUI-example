@@ -61,6 +61,7 @@ declare module 'vue-router/auto-routes' {
     '//component_mini/screen_full': RouteRecordInfo<'//component_mini/screen_full', '/component_mini/screen_full', Record<never, never>, Record<never, never>>,
     '//component_mini/state': RouteRecordInfo<'//component_mini/state', '/component_mini/state', Record<never, never>, Record<never, never>>,
     '//component_mini/todo': RouteRecordInfo<'//component_mini/todo', '/component_mini/todo', Record<never, never>, Record<never, never>>,
+    '//component_mini/tree': RouteRecordInfo<'//component_mini/tree', '/component_mini/tree', Record<never, never>, Record<never, never>>,
     '//test/todo': RouteRecordInfo<'//test/todo', '/test/todo', Record<never, never>, Record<never, never>>,
     '/_dev/': RouteRecordInfo<'/_dev/', '/_dev', Record<never, never>, Record<never, never>>,
     '/_dev/_dev/a_test/long-test-page copy': RouteRecordInfo<'/_dev/_dev/a_test/long-test-page copy', '/_dev/_dev/a_test/long-test-page copy', Record<never, never>, Record<never, never>>,

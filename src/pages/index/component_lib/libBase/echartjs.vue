@@ -1,5 +1,5 @@
 <template>
-  <div ref="echartDom" w-200px h-100px></div>
+  <div ref="echartDom" w-100 h-100></div>
 </template>
 
 <script setup lang="ts">

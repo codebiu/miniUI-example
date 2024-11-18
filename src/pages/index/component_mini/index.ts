@@ -102,6 +102,13 @@ const fileList = [
         "description": "标准模板",
         "name": "todo",
         "pathFromPagesVue": "component_mini/todo"
+      },
+      {
+        "parent": "todo",
+        "summary": "树",
+        "description": "文件树 选项树",
+        "name": "tree",
+        "pathFromPagesVue": "component_mini/tree"
       }
     ]
   }
