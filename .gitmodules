@@ -1,3 +1,6 @@
 [submodule "src/components/miniUI"]
 	path = src/components/miniUI
 	url = https://github.com/codebiu/miniUI.git
+[submodule "public/test-data"]
+	path = public/test-data
+	url = https://github.com/codebiu/test-data.git
