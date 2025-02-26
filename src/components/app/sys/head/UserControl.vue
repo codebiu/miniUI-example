@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul flex flex-col>
+    <CollapseBase :buttonList = "buttonList">
       <li my-1 mb-3>
         <div mini-text-center-between h-12>
           <!-- 名字 邮箱 -->
@@ -16,28 +16,8 @@
             @click="sysStyle.isUserControlShow = false">×</button>
         </div>
       </li>
-      <!-- 循环buttonList -->
-      <li v-for="(item, index) in buttonList" :key="index" m-1>
-        <!-- fuc -->
-        <button v-if="item.clickFuc" flex items-center w-full h-16 p-1 bg-deep-0 rounded-lg hover:bg-deep-2
-          @click="item.clickFuc(item)" :class="item.isShow && 'bg-deep-3'">
-          <component :is="item.icon" v-if="item.icon" w-8 mx-1 />
-          <span sm font-2 mx-2>{{ item.name }}</span>
-        </button>
-        <!-- child MinPopover-->
-        <MinPopover v-if="item.child" v-model="item.isShow">
-          <ShowHidden>
-            <div v-show="item.isShow" flex flex-col relative left-4 w-55 p-2 rounded-lg bg-deep-0 >
-              <RouterLink :to=fun1Router.url v-for="fun1Router in item.child" :key="fun1Router.name" hover:bg-deep-2>
-                {{ fun1Router.name }}
-              </RouterLink>
-            </div>
-          </ShowHidden>
-        </MinPopover>
-
-      </li>
-
-    </ul>
+      
+    </CollapseBase>
   </div>
 </template>
 

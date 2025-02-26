@@ -1,7 +1,7 @@
 <template>
     <div relative>
         <div absolute w-full>
-            <div text-10 p-2>总览</div>
+            <div text-10 p-2>依赖库引入总览</div>
             <!-- 组件列表 -->
             <div v-for="item, index in fileList" :key="index">
                 <!-- 大类 -->

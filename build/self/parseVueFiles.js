@@ -60,7 +60,9 @@ function extractPath(fullPath) {
 
   // 使用正则表达式匹配 'pages' 和 '.vue' 之间的路径部分
   // const regex = /pages(.*?).vue/
-  const regex = /pages\\index\\(.*?).vue/;
+  // const regex = /pages\\index\\(.*?).vue/;
+  // 首位保留/  作为绝对路径
+  const regex = /pages\\index(.*?).vue/;
   const match = normalizedPath.match(regex)
   if (match && match[1]) return match[1].replace(/\\/g, '/')
   return '未识别!'

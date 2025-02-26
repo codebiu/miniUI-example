@@ -28,50 +28,6 @@ const buttonList = ref([
     {
         name: 'mini组件总览',
         path: '/'
-    },
-    {
-        name: '文件树',
-        path: '/file_tree'
-    },
-    {
-        name: '固定满屏',
-        path: '/screen_full'
-    },
-    {
-        name: '动态高度',
-        path: '/screen_auto'
-    },
-    {
-        name: 'button',
-        path: '/button'
-    },
-    {
-        name: 'editor',
-        path: '/editor'
-    },
-    {
-        name: 'state',
-        path: '/state'
-    },
-    {
-        name: 'echart_graph',
-        path: '/echart_graph'
-    },
-    {
-        name: 'layout布局',
-        path: '/layout'
-    },
-    {
-        name: 'chat',
-        path: '/chat'
-    },
-    {
-        name: 'todo',
-        path: '/todo'
-    },
-    {
-        name: 'todo',
-        path: '/todo'
     }
 ])
 
