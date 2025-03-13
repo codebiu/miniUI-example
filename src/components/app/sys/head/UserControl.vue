@@ -16,7 +16,6 @@
             @click="sysStyle.isUserControlShow = false">×</button>
         </div>
       </li>
-      
     </CollapseBase>
   </div>
 </template>

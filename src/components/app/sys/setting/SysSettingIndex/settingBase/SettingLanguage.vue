@@ -12,7 +12,7 @@
       <!-- <option disabled value="">Please select one</option> -->
       <option v-for="item in languageOptions" :key="item.value" :value="item.value" bg-deep-2>
         <!--     :label="item.label" -->
-        <img src="" alt="" w-50 h-50 />
+        <!-- <img src="" alt="" w-50 h-50 /> -->
         {{ item.label }}
       </option>
     </select>
@@ -25,6 +25,6 @@ import { SysSettingStore } from '@/stores/sys'
 import { i18n, languageOptions } from '@/i18n/language'
 const { sysStyle } = SysSettingStore()
 /////////////////////////////////////////////////////////todo/////////////////////////////////////////////////////////
-const changeValueFunc = () => i18n.global.locale = sysStyle.language
+const changeValueFunc = () => (i18n.global.locale = sysStyle.language)
 </script>
 <style scoped></style>

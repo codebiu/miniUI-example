@@ -178,6 +178,18 @@ const fileList = [
     ]
   },
   {
+    "label": "editer",
+    "child": [
+      {
+        "parent": "editer",
+        "summary": "markdown简介",
+        "description": "标准模板",
+        "name": "markdown",
+        "pathFromPagesVue": "/component_lib/libBase/editer/markdown"
+      }
+    ]
+  },
+  {
     "label": "media",
     "child": [
       {

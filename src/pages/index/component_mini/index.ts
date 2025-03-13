@@ -1,17 +1,5 @@
 const fileList = [
   {
-    "label": "button",
-    "child": [
-      {
-        "parent": "button",
-        "summary": "button list",
-        "description": "按钮(切换/动画/头像)",
-        "name": "button",
-        "pathFromPagesVue": "/component_mini/button"
-      }
-    ]
-  },
-  {
     "label": "default",
     "child": [
       {
@@ -109,6 +97,25 @@ const fileList = [
         "description": "文件树 选项树",
         "name": "tree",
         "pathFromPagesVue": "/component_mini/tree"
+      }
+    ]
+  },
+  {
+    "label": "button",
+    "child": [
+      {
+        "parent": "button",
+        "summary": "button list",
+        "description": "按钮(切换/动画/头像)",
+        "name": "button",
+        "pathFromPagesVue": "/component_mini/button/button"
+      },
+      {
+        "parent": "button",
+        "summary": "简介",
+        "description": "媒体按钮和按钮组",
+        "name": "media_button",
+        "pathFromPagesVue": "/component_mini/button/media_button"
       }
     ]
   },
