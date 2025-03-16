@@ -1,10 +1,10 @@
 <template>
-    <div media-button-page max-w-800px mx-auto p-20px font-sans>
+    <div media-button-page mx-auto p-10 font-sans>
         <h1 text-2xl font-bold mb-20px>媒体按钮组件展示</h1>
-        <div flex justify-center my-20px>
+        <div flex justify-center my-20px bg-deep-0>
             <ButtonMediaBase v-model:isPlaying="isPlaying" v-model:isvoice="isvoice" v-model:voiceIng="voiceIng" />
         </div>
-        <div controls mt-30px>
+        <div controls>
             <h2 text-xl font-semibold mb-10px>动态设置属性</h2>
             <div control-item my-10px>
                 <label flex items-center>
@@ -25,13 +25,9 @@
                 </label>
             </div>
         </div>
-        <div code-container mt-30px bg-gray-100 p-15px rounded-5px>
+        <div code-container bg-gray-100 rounded-5px>
             <h2 text-xl font-semibold mb-10px>使用源码</h2>
-            <LibMarked v-model:markdownInput="markdownText"  class="w-1/2 " bg-deep-2 p-2/>
-
-
-           
-            <!-- <div v-html="highlightedCode" class="code-block"></div> -->
+            <LibMarked v-model:markdownInput="markdownText" w-full max-h-200 overflow-auto bg-deep-2 p-2 />
         </div>
     </div>
 </template>
@@ -78,7 +74,7 @@ watch([isPlaying, isvoice, voiceIng], ([newIsPlaying, newIsvoice, newVoiceIng]) 
 ////////////////////7_fuc__________////////////////////
 ////////////////////8_fetch________////////////////////
 ////////////////////9_code_block___////////////////////
-const markdownText =ref( `
+const markdownText = ref(`
 \`\`\`ts
 <template>
   <ButtonMediaBase

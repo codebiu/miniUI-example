@@ -1,15 +1,13 @@
 <template>
-    <div>
-        <div class="markdown-body prose lg:prose-xl rounded">
-            <div v-for="(block, index) in markdownBlocks" :key="index">
-                <div v-if="isCodeBlock(block)" class="code-block-wrapper">
-                    <button class="copy-button" @click="copyCode(block)">
-                        Copy
-                    </button>
-                    <div v-html="block"></div>
-                </div>
-                <div v-else v-html="block"></div>
+    <div class="markdown-body prose lg:prose-xl rounded">
+        <div v-for="(block, index) in markdownBlocks" :key="index">
+            <div v-if="isCodeBlock(block)" class="code-block-wrapper">
+                <button class="copy-button" @click="copyCode(block)">
+                    Copy
+                </button>
+                <div v-html="block"></div>
             </div>
+            <div v-else v-html="block"></div>
         </div>
     </div>
 </template>
@@ -33,7 +31,7 @@ const md = new MarkdownIt({
         if (lang && hljs.getLanguage(lang)) {
             try {
                 return hljs.highlight(str, { language: lang }).value
-            } catch (__) {}
+            } catch (__) { }
         }
         return '' // 使用默认的高亮处理
     }
