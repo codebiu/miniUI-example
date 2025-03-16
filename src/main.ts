@@ -25,3 +25,6 @@ app.use(createPinia())
 app.use(router)
 
 app.mount('#app')
+
+
+// app.component('RecycleScroller', RecycleScroller)

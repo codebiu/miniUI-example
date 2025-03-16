@@ -62,8 +62,10 @@ function extractPath(fullPath) {
   // const regex = /pages(.*?).vue/
   // const regex = /pages\\index\\(.*?).vue/;
   // 首位保留/  作为绝对路径
-  const regex = /pages\\index(.*?).vue/;
+  // const regex = /pages\\index(.*?).vue/;
+  const regex = /pages\\index(.*).vue/;
   const match = normalizedPath.match(regex)
+  // console.log('match', match[1],match,normalizedPath)
   if (match && match[1]) return match[1].replace(/\\/g, '/')
   return '未识别!'
 }

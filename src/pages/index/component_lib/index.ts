@@ -221,6 +221,18 @@ const fileList = [
         "pathFromPagesVue": "/component_lib/media/vadjs"
       }
     ]
+  },
+  {
+    "label": "ui",
+    "child": [
+      {
+        "parent": "ui",
+        "summary": "简介",
+        "description": "虚拟列表",
+        "name": "vue-virtual-scroller",
+        "pathFromPagesVue": "/component_lib/ui/vue-virtual-scroller"
+      }
+    ]
   }
 ]
     

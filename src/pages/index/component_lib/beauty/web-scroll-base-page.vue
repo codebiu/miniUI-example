@@ -206,12 +206,11 @@ const basScroll2 = (scrollRef: Ref<HTMLElement | null>,railRef: Ref<HTMLElement 
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped >
 /* 滚动条所在容器 */
 .scroll2 {
   overflow: overlay;
   overflow-x: hidden;
-  // background-color: #f50000;
 }
 
 /* 滚动条整体 高度写不写，都不影响，因为会根据内容的长度自动计算*/
