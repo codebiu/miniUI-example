@@ -57,7 +57,7 @@ const items = computed(() => {
 const jumpIndex = ref('')
 
 // 获取 RecycleScroller 实例
-const scroller = ref(null)
+const scroller = ref()
 ////////////////////5_vue__________////////////////////
 onMounted(() => {
   //console.log('onMounted_debugger')

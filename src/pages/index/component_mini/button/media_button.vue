@@ -1,6 +1,5 @@
 <template>
     <div media-button-page mx-auto p-10 font-sans>
-        <h1 text-2xl font-bold mb-20px>媒体按钮组件展示</h1>
         <div flex justify-center my-20px bg-deep-0>
             <ButtonMediaBase v-model:isPlaying="isPlaying" v-model:isvoice="isvoice" v-model:voiceIng="voiceIng" />
         </div>
@@ -25,10 +24,6 @@
                 </label>
             </div>
         </div>
-        <div code-container bg-gray-100 rounded-5px>
-            <h2 text-xl font-semibold mb-10px>使用源码</h2>
-            <LibMarked v-model:markdownInput="markdownText" w-full max-h-200 overflow-auto bg-deep-2 p-2 />
-        </div>
     </div>
 </template>
 
@@ -49,19 +44,13 @@
  */
 ////////////////////1_import_______////////////////////
 import { ref } from 'vue';
-//   import ButtonMediaBase from './ButtonMediaBase.vue'; // 确保路径正确
-////////////////////2_type_________////////////////////
-////////////////////3_class________////////////////////
-////////////////////4_obj__________////////////////////
 const isPlaying = ref(false);
 const isvoice = ref(false);
 const voiceIng = ref(false);
-
 ////////////////////5_vue__________////////////////////
 onMounted(() => {
     console.log('页面加载完成');
 });
-
 ////////////////////6_watch________////////////////////
 watch([isPlaying, isvoice, voiceIng], ([newIsPlaying, newIsvoice, newVoiceIng]) => {
     console.log('状态变化：', {
@@ -70,31 +59,6 @@ watch([isPlaying, isvoice, voiceIng], ([newIsPlaying, newIsvoice, newVoiceIng]) 
         voiceIng: newVoiceIng,
     });
 });
-
-////////////////////7_fuc__________////////////////////
-////////////////////8_fetch________////////////////////
-////////////////////9_code_block___////////////////////
-const markdownText = ref(`
-\`\`\`ts
-<template>
-  <ButtonMediaBase
-    v-model:isPlaying="isPlaying"
-    v-model:isvoice="isvoice"
-    v-model:voiceIng="voiceIng"
-  />
-</template>
-
-<script setup lang="ts">
-import { ref } from 'vue'
-import ButtonMediaBase from './ButtonMediaBase.vue'
-
-const isPlaying = ref(false)
-const isvoice = ref(false)
-const voiceIng = ref(false)
-<\/script>
-\`\`\`
-`)
-
 </script>
 
 <style scoped>

@@ -116,6 +116,13 @@ const fileList = [
         "description": "媒体按钮和按钮组",
         "name": "media_button",
         "pathFromPagesVue": "/component_mini/button/media_button"
+      },
+      {
+        "parent": "button",
+        "summary": "简介",
+        "description": "媒体按钮和按钮组mini_doc_media_button",
+        "name": "mini_doc_media_button",
+        "pathFromPagesVue": "/component_mini/button/mini_doc_media_button"
       }
     ]
   },

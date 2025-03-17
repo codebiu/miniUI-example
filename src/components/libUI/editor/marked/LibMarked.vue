@@ -16,7 +16,10 @@
 import MarkdownIt from 'markdown-it'
 import { ref, watch, onMounted } from 'vue'
 import hljs from 'highlight.js'
-import 'highlight.js/styles/foundation.css' // 使用黑白主题
+// import 'highlight.js/styles/foundation.css' // 使用黑白主题
+// import 'highlight.js/styles/atom-one-dark.css' // 更换主题
+import 'highlight.js/styles/stackoverflow-light.css' // 更换主题
+import 'github-markdown-css/github-markdown-light.css';
 
 // 使用 defineModel 接收外部传入的 Markdown 内容
 const markdownInput = defineModel<string>('markdownInput', { required: true })
@@ -79,13 +82,6 @@ watch(
     position: relative;
 }
 
-pre {
-    background-color: #1e1e1e;
-    color: #d4d4d4;
-    padding: 1rem;
-    border-radius: 4px;
-    overflow-x: auto;
-}
 
 .copy-button {
     position: absolute;
@@ -103,4 +99,6 @@ pre {
 .copy-button:hover {
     background-color: #555;
 }
+
+
 </style>

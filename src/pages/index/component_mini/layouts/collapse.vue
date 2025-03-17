@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1 text-2xl font-bold mb-20px>折叠面板</h1>
     <!-- 遍历数组生成折叠面板 -->
     <CollapseBase :buttonList="buttonList">
       <li my-1 mb-3>
@@ -18,6 +19,11 @@
       </li>
 
     </CollapseBase>
+
+    <div code-container bg-gray-100 rounded-5px>
+      <h2 text-xl font-semibold mb-10px>使用源码</h2>
+      <LibMarked v-model:markdownInput="markdownText" w-full max-h-200 overflow-auto bg-deep-2 p-2 />
+    </div>
   </div>
 </template>
 <script setup lang='ts'>
@@ -77,6 +83,37 @@ const buttonList = ref([{
   }
 }
 ])
+
+
+const markdownText = ref(`
+\`\`\`ts
+<CollapseBase :buttonList="buttonList" >
+      <li my-1 mb-3>
+        <div mini-text-center-between h-12>
+          <!-- 名字 邮箱 -->
+          <div flex items-center h-full>
+            <UserLogin m-2 w-12 h-full />
+            <div text-deep-1>
+              <div text-lg font-600>Name User</div>
+              <div text-sm font-100 text-deep-5>**@***.com</div>
+            </div>
+          </div>
+          <!-- 关闭 -->
+          <button w-14 h-full rounded-full bg-deep-2 hover:bg-deep-3>×</button>
+        </div>
+      </li>
+</CollapseBase>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+import ButtonMediaBase from './ButtonMediaBase.vue'
+
+const isPlaying = ref(false)
+const isvoice = ref(false)
+const voiceIng = ref(false)
+<\/script>
+\`\`\`
+`)
 
 ////////////////////5_vue__________////////////////////
 

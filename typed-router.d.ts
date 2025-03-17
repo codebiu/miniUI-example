@@ -56,6 +56,7 @@ declare module 'vue-router/auto-routes' {
     '//component_mini/': RouteRecordInfo<'//component_mini/', '/component_mini', Record<never, never>, Record<never, never>>,
     '//component_mini/button/button': RouteRecordInfo<'//component_mini/button/button', '/component_mini/button/button', Record<never, never>, Record<never, never>>,
     '//component_mini/button/media_button': RouteRecordInfo<'//component_mini/button/media_button', '/component_mini/button/media_button', Record<never, never>, Record<never, never>>,
+    '//component_mini/button/mini_doc_media_button': RouteRecordInfo<'//component_mini/button/mini_doc_media_button', '/component_mini/button/mini_doc_media_button', Record<never, never>, Record<never, never>>,
     '//component_mini/chat': RouteRecordInfo<'//component_mini/chat', '/component_mini/chat', Record<never, never>, Record<never, never>>,
     '//component_mini/classGraph': RouteRecordInfo<'//component_mini/classGraph', '/component_mini/classGraph', Record<never, never>, Record<never, never>>,
     '//component_mini/dependencyGraph': RouteRecordInfo<'//component_mini/dependencyGraph', '/component_mini/dependencyGraph', Record<never, never>, Record<never, never>>,
