@@ -1,11 +1,12 @@
 <template>
     <div class="markdown-body prose lg:prose-xl rounded">
-        <div v-for="(block, index) in markdownBlocks" :key="index">
-            <div v-if="isCodeBlock(block)" class="code-block-wrapper">
-                <button class="copy-button" @click="copyCode(block)">
+        <div v-for="(block, index) in markdownBlocks" :key="index" relative>
+            <div v-if="isCodeBlock(block)" max-h-100 overflow-auto>
+                <!-- absolute相对于第一个设置relative的祖先元素定位 overflow-auto关键-->
+                <button absolute top-0 right-4 z-1111  text-sm  btn-deep-7 bg-opacity-60 hover:bg-opacity-75 @click="copyCode(block)">
                     Copy
                 </button>
-                <div v-html="block"></div>
+                <div v-html="block" h-full></div>
             </div>
             <div v-else v-html="block"></div>
         </div>
@@ -84,7 +85,7 @@ watch(
 
 
 .copy-button {
-    position: absolute;
+    position: sticky;
     top: 0.5rem;
     right: 0.5rem;
     padding: 0.25rem 0.5rem;
@@ -99,6 +100,4 @@ watch(
 .copy-button:hover {
     background-color: #555;
 }
-
-
 </style>

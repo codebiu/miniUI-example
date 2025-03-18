@@ -51,6 +51,8 @@ export default defineConfig({
       'fbg-deep-3': 'bg-gray-300 dark:bg-gray-700',
       'fbg-deep-4': 'bg-gray-400 dark:bg-gray-600',
       // 边框
+      // 卡片圆肩带阴影内部padding
+      'card-default': 'rounded-lg shadow-lg p-4',
       // 鼠标
       'pointer-default': 'select-none  cursor-pointer',
       /**

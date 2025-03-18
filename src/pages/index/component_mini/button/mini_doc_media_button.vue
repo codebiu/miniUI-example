@@ -1,6 +1,11 @@
 <template>
     <div flex>
         <div media-button-page min-200 p-10 font-sans>
+             <!-- Header -->
+      <div class="mb-12 text-center">
+        <h1 class="text-4xl font-bold text-gray-900 mb-2">Component Preview</h1>
+        <p class="text-gray-600">Interactive preview with documentation and source code</p>
+      </div>
             <h1 text-2xl font-bold mb-20px>媒体按钮和按钮组</h1>
             <media_button></media_button>
             <h2 text-xl font-semibold mb-10px>源码</h2>
