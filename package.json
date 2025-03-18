@@ -23,6 +23,7 @@
     "@types/stats.js": "^0.17.3",
     "@types/three": "0.174.0",
     "@unocss/reset": "66.0.0",
+    "@vue/compiler-dom": "^3.5.13",
     "@vue/compiler-sfc": "^3.5.12",
     "@vueuse/core": "13.0.0",
     "babylonjs": "^7.12.0",

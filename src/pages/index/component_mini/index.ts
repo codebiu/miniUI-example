@@ -86,6 +86,13 @@ const fileList = [
     "child": [
       {
         "parent": "todo",
+        "summary": "测试编译代码",
+        "description": "测试编译代码",
+        "name": "com_unocss_test",
+        "pathFromPagesVue": "/component_mini/com_unocss_test"
+      },
+      {
+        "parent": "todo",
         "summary": "简介",
         "description": "标准模板",
         "name": "todo",
