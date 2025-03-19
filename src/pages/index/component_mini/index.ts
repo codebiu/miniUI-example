@@ -78,6 +78,13 @@ const fileList = [
         "parent": "",
         "summary": "",
         "description": ""
+      },
+      {
+        "name": "test1",
+        "pathFromPagesVue": "/component_mini/button/test1",
+        "parent": "",
+        "summary": "",
+        "description": ""
       }
     ]
   },
@@ -119,17 +126,24 @@ const fileList = [
       },
       {
         "parent": "button",
-        "summary": "简介",
-        "description": "媒体按钮和按钮组",
-        "name": "media_button",
-        "pathFromPagesVue": "/component_mini/button/media_button"
+        "summary": "媒体按钮",
+        "description": "语音识别按钮 支持多种状态",
+        "name": "button_media",
+        "pathFromPagesVue": "/component_mini/button/button_media"
       },
       {
         "parent": "button",
         "summary": "简介",
-        "description": "媒体按钮和按钮组mini_doc_media_button",
-        "name": "mini_doc_media_button",
-        "pathFromPagesVue": "/component_mini/button/mini_doc_media_button"
+        "description": "媒体按钮和按钮组button_media_doc",
+        "name": "button_media_doc",
+        "pathFromPagesVue": "/component_mini/button/button_media_doc"
+      },
+      {
+        "parent": "button",
+        "summary": "媒体按钮",
+        "description": "语音识别按钮 支持多种状态",
+        "name": "button_media_doc_generic",
+        "pathFromPagesVue": "/component_mini/button/button_media_doc_generic"
       }
     ]
   },

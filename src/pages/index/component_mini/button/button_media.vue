@@ -31,13 +31,13 @@
 /**
  * @version      :0.0
  * @author       :itild
- * @File         :media_button.vue
+ * @File         :button_media.vue
  * @Time         :2025/03/13 22:20:58
  * @Email        :geolifestudy@gmail.com
  * @Copyright    :(C) 2025 itild. All rights reserved.
  * @parent       :button
- * @summary      :简介
- * @description  :媒体按钮和按钮组
+ * @summary      :媒体按钮
+ * @description  :语音识别按钮 支持多种状态
  * 
  * 1 import 2 type 3 class 4 obj 5 vue
  * 6 watch 7 fuc 8 fetch 9 code_block
