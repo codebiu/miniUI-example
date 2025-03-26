@@ -64,7 +64,6 @@ declare module 'vue' {
     TemplateComponent_00: typeof import('./components/app/sampleUtils/ocr/TemplateComponent_00.vue')['default']
     UiComponentDoc: typeof import('./components/libUI/doc/UiComponentDoc.vue')['default']
     UiComponentDocGeneric: typeof import('./components/libUI/doc/UiComponentDocGeneric.vue')['default']
-    UiDoc: typeof import('./components/app/sys/doc/UiComponentDoc.vue')['default']
     UserControl: typeof import('./components/app/sys/head/UserControl.vue')['default']
     UserLogin: typeof import('./components/app/sys/head/UserLogin.vue')['default']
     UserSVG: typeof import('./components/miniUI/miniSvg/UserSVG.vue')['default']

@@ -25,6 +25,7 @@ declare module 'vue-router/auto-routes' {
     '//component_lib/beauty/mini-test-index-page': RouteRecordInfo<'//component_lib/beauty/mini-test-index-page', '/component_lib/beauty/mini-test-index-page', Record<never, never>, Record<never, never>>,
     '//component_lib/beauty/web-design-base-page': RouteRecordInfo<'//component_lib/beauty/web-design-base-page', '/component_lib/beauty/web-design-base-page', Record<never, never>, Record<never, never>>,
     '//component_lib/beauty/web-scroll-base-page': RouteRecordInfo<'//component_lib/beauty/web-scroll-base-page', '/component_lib/beauty/web-scroll-base-page', Record<never, never>, Record<never, never>>,
+    '//component_lib/charts/bb_chart_graph': RouteRecordInfo<'//component_lib/charts/bb_chart_graph', '/component_lib/charts/bb_chart_graph', Record<never, never>, Record<never, never>>,
     '//component_lib/libBase/babylon': RouteRecordInfo<'//component_lib/libBase/babylon', '/component_lib/libBase/babylon', Record<never, never>, Record<never, never>>,
     '//component_lib/libBase/cesium': RouteRecordInfo<'//component_lib/libBase/cesium', '/component_lib/libBase/cesium', Record<never, never>, Record<never, never>>,
     '//component_lib/libBase/echartjs': RouteRecordInfo<'//component_lib/libBase/echartjs', '/component_lib/libBase/echartjs', Record<never, never>, Record<never, never>>,

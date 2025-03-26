@@ -166,6 +166,18 @@ const fileList = [
     ]
   },
   {
+    "label": "todo",
+    "child": [
+      {
+        "parent": "todo",
+        "summary": "charts",
+        "description": "graph 图表",
+        "name": "bb_chart_graph",
+        "pathFromPagesVue": "/component_lib/charts/bb_chart_graph"
+      }
+    ]
+  },
+  {
     "label": "AI",
     "child": [
       {
