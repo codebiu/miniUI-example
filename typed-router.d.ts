@@ -52,6 +52,7 @@ declare module 'vue-router/auto-routes' {
     '//component_lib/media/speech_microsoft_sdk': RouteRecordInfo<'//component_lib/media/speech_microsoft_sdk', '/component_lib/media/speech_microsoft_sdk', Record<never, never>, Record<never, never>>,
     '//component_lib/media/vad': RouteRecordInfo<'//component_lib/media/vad', '/component_lib/media/vad', Record<never, never>, Record<never, never>>,
     '//component_lib/media/vadjs': RouteRecordInfo<'//component_lib/media/vadjs', '/component_lib/media/vadjs', Record<never, never>, Record<never, never>>,
+    '//component_lib/nav/nav_all': RouteRecordInfo<'//component_lib/nav/nav_all', '/component_lib/nav/nav_all', Record<never, never>, Record<never, never>>,
     '//component_lib/ui/vue-virtual-scroller': RouteRecordInfo<'//component_lib/ui/vue-virtual-scroller', '/component_lib/ui/vue-virtual-scroller', Record<never, never>, Record<never, never>>,
     '//component_mini': RouteRecordInfo<'//component_mini', '/component_mini', Record<never, never>, Record<never, never>>,
     '//component_mini/': RouteRecordInfo<'//component_mini/', '/component_mini', Record<never, never>, Record<never, never>>,

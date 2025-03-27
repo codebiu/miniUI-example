@@ -1,7 +1,6 @@
 <template>
     <div h-full relative>
         <UiComponentDocGeneric :componentPath="componentPath" />
-        <div bg-deep-2 w-50>test</div>
     </div>
 </template>
 <script setup lang="ts">
@@ -14,7 +13,7 @@
  * @Copyright    :(C) 2025 itild. All rights reserved.
  * @parent       :button
  * @summary      :媒体按钮
- * @description  :语音识别按钮 支持多种状态
+ * @description  :语音识别按钮 支持多种状态 自动引入——后续自动生成
  */
  const componentPath = new URL('button_media', import.meta.url).href;
 </script>

@@ -166,11 +166,11 @@ const fileList = [
     ]
   },
   {
-    "label": "todo",
+    "label": "charts",
     "child": [
       {
-        "parent": "todo",
-        "summary": "charts",
+        "parent": "charts",
+        "summary": "charts graph",
         "description": "graph 图表",
         "name": "bb_chart_graph",
         "pathFromPagesVue": "/component_lib/charts/bb_chart_graph"
@@ -231,6 +231,18 @@ const fileList = [
         "description": "标准模板",
         "name": "vadjs",
         "pathFromPagesVue": "/component_lib/media/vadjs"
+      }
+    ]
+  },
+  {
+    "label": "nav",
+    "child": [
+      {
+        "parent": "nav",
+        "summary": "导航页",
+        "description": "导航页实现，左侧是可勾选的导航菜单，右侧是iframe嵌入的网页，并实现了页面缓存功能：",
+        "name": "nav_all",
+        "pathFromPagesVue": "/component_lib/nav/nav_all"
       }
     ]
   },
