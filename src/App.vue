@@ -1,6 +1,6 @@
 <template>
   <RouterView />
-  <!-- 非正常结构 弹窗类 控制类 异步加载-->
+  <!-- Suspense 非正常结构 弹窗类 控制类 异步加载-->
   <Suspense>
     <!-- 异步弹窗 -->
     <AppRoot />

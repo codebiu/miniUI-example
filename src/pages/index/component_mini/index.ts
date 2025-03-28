@@ -141,9 +141,16 @@ const fileList = [
       {
         "parent": "button",
         "summary": "媒体按钮",
-        "description": "语音识别按钮 支持多种状态",
+        "description": "语音识别按钮 支持多种状态 自动引入——后续自动生成",
         "name": "button_media_doc_generic",
         "pathFromPagesVue": "/component_mini/button/button_media_doc_generic"
+      },
+      {
+        "parent": "button",
+        "summary": "MoveButton 演示",
+        "description": "可拖动边缘按钮",
+        "name": "move_button",
+        "pathFromPagesVue": "/component_mini/button/move_button/move_button"
       }
     ]
   },

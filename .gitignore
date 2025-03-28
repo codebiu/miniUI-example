@@ -34,3 +34,6 @@ playwright-report/
 
 
 *_unup
+
+# 自动生成
+typed-router.d.ts
