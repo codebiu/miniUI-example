@@ -1,39 +1,30 @@
 <template>
-  <!-- 网站页首 -->
-  <header v-if="sysStyle.headFootShow" >
+  <!-- 网站页首区域 -->
+  <header v-if="sysStyle.headFootShow">
     <div flex flex-wrap justify-between p-4>
+      <!-- 左侧：网站Logo和名称 -->
       <router-link to="/" flex>
         <img src="@/assets/img/ion/sy_w.svg" h-8 mr-3 />
         <span self-center text-2xl font-semibold whitespace-nowrap>minUI</span>
       </router-link>
-      <!-- 空标题 可以加装饰 -->
+      <!--中间 空标题 可以加装饰 -->
       <span left-0 right-0 m-auto></span>
+      <!-- 右侧选择栏目 -->
       <ul flex min-w-200px>
         <!-- 循环buttonList -->
-        <li v-for="(item, index) in  buttonList " :key="index" m-1>
-          <button flex items-center w-full h-full bg-deep-0 rounded-sm hover:bg-deep-2 shadow-warmgray
-            shadow-sm @click="handleClick(item)" :class="clickButton === item && 'bg-deep-3'">
+        <li v-for="(item, index) in buttonList " :key="index" m-1>
+          <button flex items-center w-full h-full bg-deep-0 rounded-sm hover:bg-deep-2 shadow-warmgray shadow-sm
+            @click="handleClick(item)" :class="clickButton === item && 'bg-deep-3'">
             <span sm font-2 mx-2>{{ item.name }}</span>
           </button>
         </li>
       </ul>
       <!-- 用户图标 -->
-      <UserLogin @click="sysStyle.isUserControlShow = !sysStyle.isUserControlShow" w-8 h-8/>
+      <UserLogin @click="sysStyle.isUserControlShow = !sysStyle.isUserControlShow" w-8 h-8 />
       <!-- 点击用户图标下拉 导航栏-->
       <MinPopover v-model="sysStyle.isUserControlShow" z-999>
         <ShowHidden v-show="sysStyle.isUserControlShow">
-          <UserControl
-            absolute
-            z-10
-            w-70
-            right-2
-            top-4
-            rounded-lg
-            bg-deep-0
-            p-4
-            text-xl
-            shadow-xl
-          />
+          <UserControl absolute z-10 w-70 right-2 top-4 rounded-lg bg-deep-0 p-4 text-xl shadow-xl />
         </ShowHidden>
       </MinPopover>
     </div>
@@ -67,8 +58,8 @@ const clickButton = ref(buttonList.value[0])
 const handleClick = (item: any) => {
   clickButton.value = item
   // 如果有url，则跳转url
-  item.path&&router.push(item.path)
-  item.clickFuc&&item.clickFuc(item)
+  item.path && router.push(item.path)
+  item.clickFuc && item.clickFuc(item)
 }
 
 

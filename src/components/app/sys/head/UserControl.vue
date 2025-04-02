@@ -57,6 +57,14 @@ const buttonList = ref([{
   }
 },
 {
+  name: '博客记录',
+  icon: SettingSVG,
+  url: '/blog',
+  clickFuc: () => {
+    router.push('/blog')
+  }
+},
+{
   name: '设置',
   icon: SettingSVG,
   clickFuc: openSysSettingShow
